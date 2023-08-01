@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+
+
+ul li {
+    display: inline-block;
+}
+
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+ul li a:hover {
+    color: violet;
+    transition: 0.4s;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+
+.content .text {
+    width: 40%;
+    color: #fff;
+}   
+
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.content .text P {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.content .text a {
+    text-decoration: none;
+    background: #fff;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.content .image {
+    width: 40px;
+    
+}  
+
+.content .image img {
+    width: 180px;
+    animation: animation1 2s ease-out;
+   
+}
+
+.icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-45%);
+}
+
+.icons img {
+    width: 35px;
+    transition: 0.5s;
+    cursor: pointer;
+    animation: animation2 2s ease-out;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes animation1 {
+    0%{
+        transform: translateX(500px);
+    }           
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animation2 {
+    0%{
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .container {
+      margin: 0 1rem;
+    }
+  
+    ul li  a {
+      padding: 10px;
+    }
+  
+    #header .content {
+      flex-direction: column;
+      padding: 2rem 0 0;
+      text-align: center;
+    }
+  
+    .content .image img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  
+  
+    .content .text P {
+      width: 100%;
+    }
+  
+    .content .text P {
+      margin-bottom: 2rem;
+    }
+  
+  
+    .gallery {
+      margin-top: 15px;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 600px) {
+    .logo, ul li {
+        font-size: 13px;
+        font-weight: 600;
+        max-width: 64px;
+        justify-content: space-between;
+    }
+
+    .content .text h2{
+        font-size: 20px;
+        padding: 2rem;
+    }
+
+    .content .text a {
+        text-decoration: none;
+        background: #fff;
+        color: black;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    
+}
